@@ -9,3 +9,6 @@ spec:
     refName: contour.tanzu.vmware.com
     versionSelection:
       constraints: 1.18.2+vmware.1-tkg.1
+  values:
+  - secretRef:
+      name: contour-contour-values
