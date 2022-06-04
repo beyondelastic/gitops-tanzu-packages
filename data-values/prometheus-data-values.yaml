@@ -1,0 +1,13 @@
+ingress:
+  enabled: true
+  virtual_host_fqdn: "prometheus.tkg.beyondelastic.demo"
+  prometheus_prefix: "/"
+  alertmanager_prefix: "/alertmanager/"
+  prometheusServicePort: 80
+  alertmanagerServicePort: 80
+prometheus:
+  pvc:
+    storageClassName: gold
+alertmanager:
+  pvc:
+    storageClassName: gold
