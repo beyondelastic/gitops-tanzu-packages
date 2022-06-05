@@ -1,17 +1,18 @@
+---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   annotations:
-    tkg.tanzu.vmware.com/tanzu-package: cert-manager-packages
-  name: cert-manager-packages-sa
+    tkg.tanzu.vmware.com/tanzu-package: prometheus-packages
+  name: prometheus-packages-sa
   namespace: packages
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   annotations:
-    tkg.tanzu.vmware.com/tanzu-package: cert-manager-packages
-  name: cert-manager-packages-cluster-role
+    tkg.tanzu.vmware.com/tanzu-package: prometheus-packages
+  name: prometheus-packages-cluster-role
 rules:
 - apiGroups:
   - '*'
@@ -24,13 +25,13 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations:
-    tkg.tanzu.vmware.com/tanzu-package: cert-manager-packages
-  name: cert-manager-packages-cluster-rolebinding
+    tkg.tanzu.vmware.com/tanzu-package: prometheus-packages
+  name: prometheus-packages-cluster-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cert-manager-packages-cluster-role
+  name: prometheus-packages-cluster-role
 subjects:
 - kind: ServiceAccount
-  name: cert-manager-packages-sa
+  name: prometheus-packages-sa
   namespace: packages
