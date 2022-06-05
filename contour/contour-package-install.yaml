@@ -7,7 +7,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-Secret: contour-packages-values
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: contour-packages-sa
   name: contour
-  namespace: packagegs
+  namespace: packages
 spec:
   serviceAccountName: contour-packages-sa
   packageRef:
