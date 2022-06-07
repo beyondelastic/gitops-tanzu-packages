@@ -1,5 +1,5 @@
 namespace: tanzu-system-registry
-hostname: harbor.tkg.beyondelastic.demo
+hostname: harbor.system.tanzu
 port:
   https: 443
 logLevel: info
